@@ -3,5 +3,6 @@ data:
   hello: world
 kind: ConfigMap
 metadata:
+  namespace: default
   name: hello
 
