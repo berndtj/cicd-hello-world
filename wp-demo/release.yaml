@@ -14,17 +14,10 @@ spec:
         namespace: default
       interval: 1m
   values:
-    valuesFrom:
-    - kind: Secret
-      name: wordpress
-      valuesKey: wp-username
-      targetPath: wordpressUsername
-    - kind: Secret
-      name: wordpress
-      valuesKey: wp-password
-      targetPath: wordpressPassword
-    - kind: Secret
-      name: wordpress
-      valuesKey: mdb-password
-      targetPath: mariadb.auth.rootPassword
+    wordpressUsername: bjung
+    existingSecret: wordpress-credentials
+    wordpressEmail: bjung@vmware.com
+    wordpressFirstName: Berndt
+    wordpressLastName: Jung
+    wordpressBlogName: Berndt's Blog!
     replicaCount: 2
